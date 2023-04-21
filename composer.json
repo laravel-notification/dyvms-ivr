@@ -1,0 +1,42 @@
+{
+    "name": "laravel-notification/dyvms-ivrcall",
+    "description": "在 laravel 中使用阿里云语音服务发送交互式语音通话通知",
+    "authors": [
+        {
+            "name": "Joe",
+            "email": "gs205642@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "alibabacloud/dyvmsapi-20170525": "2.1.4",
+        "illuminate/support": "^10.0",
+        "illuminate/notifications": "^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.1",
+        "orchestra/testbench": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelNotification\\DyvmsIvrcall\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelNotification\\DyvmsIvrcall\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelNotification\\DyvmsIvrcall\\IvrcallServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
